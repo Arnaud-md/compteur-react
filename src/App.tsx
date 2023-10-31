@@ -3,6 +3,7 @@ import { useCallback } from 'react'
 import './App.css'
 import Counter from './Counter'
 import Compteur from './Compteur'
+import Counter4 from './Counter4'
 
 function App() {
   let [cptP, setCptP] = useState(0);
@@ -17,6 +18,15 @@ function App() {
       </div>
       <div>
         <Compteur cptP={cptP}/>
+      </div>
+      <div>
+        <button onClick={handleClick}>+</button>
+      </div>
+      <div>
+        <Counter4 cptP={cptP}/>
+      </div>
+      <div>
+        <Counter4 cptP={cptP}/>
       </div>
       <div>
         <button onClick={handleClick}>+</button>
