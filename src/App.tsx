@@ -14,6 +14,9 @@ function App() {
   return (
     <>
       <div>
+        <Counter />
+      </div>
+      <div>
         <Compteur cptP={cptP} />
       </div>
       <div>
