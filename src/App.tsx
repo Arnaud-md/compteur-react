@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useCallback } from 'react'
 import './App.css'
 import Counter from './Counter'
@@ -6,11 +6,31 @@ import Compteur from './Compteur'
 import Counter4 from './Counter4'
 // import Compteur4 from './Compteur4'
 import Compteur5 from './Compteur5'
+import Compteur6 from './Compteur6'
+import Compteur7 from './Compteur7'
 
 function App() {
   //let [cptP, setCptP] = useState(0);
   let [cpt1,setCpt1] = useState(0);
   let [cpt2,setCpt2] = useState(0);
+  // const eventClickPlus = useCallback(
+  //   () => {setCpt1(cpt1+1);
+  //         setCpt2(cpt2+1);
+  //         return [cpt1,cpt2]},[cpt1,cpt2]);
+ 
+  // const eventClickMoins = useCallback(
+  //   () => {setCpt1(cpt1-1);
+  //         setCpt2(cpt2-1);
+  //         return [cpt1,cpt2]},[cpt1,cpt2]);
+  const eventClickPlus = 
+    () => {setCpt1(cpt1+1);
+          setCpt2(cpt2+1);
+          return [cpt1,cpt2]};
+ 
+  const eventClickMoins =
+    () => {setCpt1(cpt1-1);
+          setCpt2(cpt2-1);
+          return [cpt1,cpt2]};
   const handleClick = useCallback(
     // () => setCptP(cptP+1)
     // , [cptP]
@@ -68,6 +88,16 @@ function App() {
         
         />
       </div>
+      {/* <div>
+        <Compteur6 count={cpt1}
+                    eventClickPlus={eventClickPlus}
+                    eventClickMoins={eventClickMoins}/>
+      </div>
+      <div>
+        <Compteur7 count={cpt1}
+                    eventClickPlus={eventClickPlus}
+                    eventClickMoins={eventClickMoins}/>
+      </div> */}
       <div>
         <button onClick={handleClick}>+</button>
       </div>
